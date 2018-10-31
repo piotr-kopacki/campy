@@ -1,0 +1,1 @@
+Campy: Activate your account, {{ user.username }}

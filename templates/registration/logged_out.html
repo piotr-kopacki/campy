@@ -1,0 +1,13 @@
+{% extends "camapp/base.html" %}
+
+{% block content %}
+    <p class="text-center"><strong>Logged out!</strong></p>
+    <p class="text-center">You will be redirected to home page in 5 seconds..</p>
+    <script type="text/javascript">   
+    function Redirect() 
+    {  
+        window.location="{% url 'index' %}"; 
+    } 
+    setTimeout('Redirect()', 5000);   
+</script>
+{% endblock %}

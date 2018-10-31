@@ -1,0 +1,38 @@
+{% extends "camapp/base.html" %}
+{% block content %}
+    {% load static %}
+    <img src="{% static 'camapp/logo.png' %}" alt="" class="img-fluid mx-auto d-block">
+    <h1 class="display-4 text-center">Embed your camera on your website!</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sollicitudin ligula nisl, accumsan eleifend augue vestibulum vitae. Fusce ante dui, tempus a commodo eu, cursus sit amet massa. Quisque lacinia facilisis luctus. Phasellus sodales enim turpis, eu eleifend felis congue eu. Etiam molestie risus lorem, eget tincidunt mi vestibulum quis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed venenatis sem nec feugiat finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec aliquet augue mauris, a vehicula ligula tincidunt nec. Cras viverra odio purus, sit amet tempus metus ullamcorper eget. Integer non orci ante. In tempor erat non massa vestibulum, dignissim condimentum lectus finibus. Vivamus massa ante, euismod quis laoreet at, rutrum ut ipsum. Suspendisse auctor imperdiet libero, ac interdum arcu dignissim at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec porttitor arcu sem, eget tincidunt nulla ultricies at.</p>
+    <div class="columns">
+	  <ul class="price">
+	    <li class="header">Basic</li>
+	    <li class="grey">$ 4.99 / month</li>
+	    <li>1 Camera</li>
+	    <li>Basic ticket support</li>
+	    <li>SHD Quality</li>
+	    <li class="grey"><a href="{% url 'login' %}" class="button">Sign Up</a></li>
+	  </ul>
+	</div>
+	<div class="columns">
+	  <ul class="price">
+	    <li class="header-standard">Standard</li>
+	    <li class="grey">$ 9.99 / month</li>
+	    <li>5 Cameras</li>
+	    <li>Standard support</li>
+	    <li>HD Quality</li>
+	    <li class="grey"><a href="{% url 'login' %}" class="button" id="standard-button">Sign Up</a></li>
+	  </ul>
+	</div>
+	<div class="columns">
+	  <ul class="price">
+	    <li class="header-premium">Premium</li>
+	    <li class="grey">$ 19.99 / month</li>
+	    <li><strong>15 Cameras</strong></li>
+	    <li><strong>Live 24/7 support</strong></li>
+	    <li><strong>Full HD Quality</strong></li>
+	    <li class="grey"><a href="{% url 'login' %}" class="button" id="premium-button">Sign Up</a></li>
+	  </ul>
+	</div>
+
+{% endblock %}

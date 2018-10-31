@@ -1,0 +1,22 @@
+{% extends "camapp/base.html" %}
+{% block content %}
+    <h1>Hello, <em>{{ user.get_username }}</em>!</h1>
+    <h2>Your cameras: </h2>
+    <ul style="margin-bottom: 0px">
+        {% for camera in cameras %}
+        <li><a href="{% url 'me' %}{{ camera.id }}">
+            {% if not camera.alias %}
+                My Camera
+            {% else %}
+                {{ camera.alias }}
+            {% endif %}
+        </a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'camera_create' %}">Add</a>
+    <p>Your api key:
+    {{ profile.api_key }}</p>
+    <form action="{% url 'api_reset' %}">
+        <input type="submit" value="Reset api key">
+    </form>
+{% endblock %}

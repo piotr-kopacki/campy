@@ -1,0 +1,23 @@
+{% extends "camapp/base.html" %}
+
+{% block content %}
+<p>
+	<h1>
+	{% if not camera.alias %}
+	    My Camera
+	{% else %}
+	    {{ camera.alias }}
+	{% endif %}
+	</h1>
+	<p>
+	<a href="{% url 'camera_update' pk=camera.id %}">Edit</a>
+	<a href="{% url 'camera_delete' pk=camera.id %}" style="color: red;">Delete</a>
+	</p>
+</p>
+<a href="{% url 'me' %}">Back to the list  </a>
+<br><br>
+<iframe width="560" height="315" src="{{ request.path }}/frame/?api_key={{ profile.api_key }}" frameborder="0" allow="autoplay" allow="encrypted-media" allowfullscreen></iframe>
+<br><br>
+<p>Place this code on your website:</p>
+<code>{{ frame_code }}</code>
+{% endblock %}
