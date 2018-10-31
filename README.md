@@ -1,5 +1,5 @@
 # Campy
-A site made for my RTSP Stream converting script made with Django.
+A site made for my RTSP Stream converting script. Made with Django.
 
 ### Installation
 
